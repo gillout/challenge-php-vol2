@@ -41,9 +41,4 @@ class PalindromeCheckerTest extends TestCase
         self::assertTrue($this->checker->check("A man, a plan, a canal. Panama"));
     }
 
-
-
-
-
-
 }

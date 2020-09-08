@@ -15,6 +15,16 @@ class SortedUnion
      */
     public function sort(array ...$arr): array
     {
-        return [];
+        $resTmp = [];
+        $result = [];
+        foreach ($arr as $tab) {
+            $resTmp = array_merge($resTmp, $tab);
+        }
+        $resTmp = array_unique($resTmp);
+        sort($resTmp);
+        for ($i = 0; $i < count($resTmp); $i++) {
+            $result[] = $resTmp[$i];
+        }
+        return $result;
     }
 }

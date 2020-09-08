@@ -13,6 +13,11 @@ class StringReverser
      */
     public function reverse(string $str): string
     {
-        return $str;
+        $result = '';
+        $length = strlen($str);
+        for ($i = $length - 1; $i >= 0; $i--) {
+            $result .= $str[$i];
+        }
+        return $result;
     }
 }
